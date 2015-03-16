@@ -397,7 +397,8 @@ def bind_all():
     #     bind_one(d, driver, force)
 
     for d in devices.keys():
-        if devices[d]["Device_str"].find("82545") >= 0:
+        if (devices[d]["Device_str"].find("82545") >= 0) and (devices[d]["Interface"] != "eth0"):
+            # print(devices[d])
             print(devices[d]["Device_str"])
             bind_one(d, "igb_uio", False)
         

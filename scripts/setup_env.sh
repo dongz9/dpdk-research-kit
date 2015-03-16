@@ -5,7 +5,7 @@
 #
 setup_target()
 {
-    make install T=${RTE_TARGET} O=${OBJ_DIR}
+    make install T=${RTE_TARGET}
 }
 
 #
@@ -163,7 +163,6 @@ grep_meminfo()
 }
 
 export RTE_SDK=$(pwd)/../dpdk
-export OBJ_DIR=$(pwd)/../obj
 export RTE_TARGET=x86_64-native-linuxapp-gcc
 
 # echo $RTE_SDK
